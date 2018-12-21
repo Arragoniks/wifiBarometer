@@ -20,10 +20,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GraphActivity" />
-        <activity android:name=".SamplesActivity" />
         <activity android:name=".PropertiesActivity" android:configChanges="orientation|screenSize"/>
-        <activity android:name=".MeasureActivity" />
         <activity android:name=".SensorPropActivity" android:configChanges="orientation|screenSize"/>
         <activity android:name=".GraphingActivity" android:configChanges="orientation|screenSize"></activity>
     </application>
