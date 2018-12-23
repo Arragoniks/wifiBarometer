@@ -17,10 +17,9 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/textView2"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="45dp"
-        android:text="Samples"
+        android:text="Delay between samples (ms)"
         android:textSize="18sp" />
 
     <Spinner
@@ -28,29 +27,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="80dp"
-        android:entries="@array/samples"/>
+        android:layout_below="@+id/textView4"
+        android:entries="@array/samples" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/editSamples"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="170dp"
+        android:layout_below="@+id/textView5"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name" />
+        android:inputType="numberDecimal"
+        android:hint="type here" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/spinnerSamples"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="138dp"
-        android:text="Custom Samples"
+        android:text="Custom (ms)"
         android:textSize="18sp" />
 
     <TextView
@@ -59,64 +55,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="227dp"
+        android:layout_marginTop="187dp"
         android:text="Graph"
         android:textSize="18sp" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="28dp"
-        android:text="Reset Before Graphing"
-        android:textSize="18sp" />
-
-    <Button
-        android:id="@+id/buttonROK"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_centerVertical="true"
-        android:layout_marginEnd="85dp"
-        android:text="OK" />
-
-    <Button
-        android:id="@+id/buttonRNO"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="-85dp"
-        android:layout_toEndOf="@+id/buttonROK"
-        android:text="NO" />
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="215dp"
-        android:layout_toStartOf="@+id/textView5"
-        android:text="Build Graph"
-        android:textSize="18sp" />
-
-    <Button
-        android:id="@+id/buttonBOK"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/buttonROK"
-        android:layout_alignTop="@+id/textView10"
-        android:text="OK" />
-
-    <Button
-        android:id="@+id/buttonBNO"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/textView10"
-        android:layout_marginStart="-85dp"
-        android:layout_toEndOf="@+id/buttonROK"
-        android:text="NO" />
 
     <TextView
         android:id="@+id/textView12"
@@ -124,7 +65,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="159dp"
+        android:layout_marginBottom="187dp"
         android:text="Graph Points"
         android:textSize="18sp" />
 
@@ -132,40 +73,10 @@
         android:id="@+id/spinnerPoints"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="100dp"
-        android:entries="@array/graphPoints"/>
-
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="67dp"
-        android:layout_marginStart="12dp"
-        android:text="Save To Buffer"
-        android:textSize="18sp" />
-
-    <Button
-        android:id="@+id/buttonSOK"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/buttonROK"
-        android:layout_below="@+id/spinnerPoints"
-        android:layout_marginTop="-100dp"
-        android:text="OK" />
-
-    <Button
-        android:id="@+id/buttonSNO"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/spinnerPoints"
-        android:layout_marginStart="-85dp"
-        android:layout_marginTop="-100dp"
-        android:layout_toEndOf="@+id/buttonROK"
-        android:text="NO" />
+        android:layout_below="@+id/textView12"
+        android:layout_marginTop="-187dp"
+        android:entries="@array/graphPoints" />
 
     <Button
         android:id="@+id/buttonPropApply"
@@ -174,4 +85,36 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:text="Apply" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="225dp"
+        android:text="Resret before graphing"
+        android:textOff="Off"
+        android:textOn="On" />
+
+    <Switch
+        android:id="@+id/switch2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:text="Build graph"
+        android:textOff="Off"
+        android:textOn="On" />
+
+    <Switch
+        android:id="@+id/switch3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="225dp"
+        android:text="Save to buffer"
+        android:textOff="Off"
+        android:textOn="On" />
 </RelativeLayout>

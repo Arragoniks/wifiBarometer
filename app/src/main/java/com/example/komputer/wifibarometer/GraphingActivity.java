@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -70,6 +71,7 @@ public class GraphingActivity extends AppCompatActivity {
                         break;
                     case "Reset":
                         graph.removeAllSeries();
+                        Log.e("reseting", "reset button");
                         break;
                     case "Save":
                         break;

@@ -22,7 +22,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="47dp"
-        android:text="Presurre"
+        android:text="Presurre (Accuracy)"
         android:textSize="18sp" />
 
     <Spinner
@@ -41,7 +41,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="130dp"
-        android:text="Interval"
+        android:text="Interval (ms)"
         android:textSize="18sp" />
 
     <Spinner
@@ -60,7 +60,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="221dp"
-        android:text="Filter"
+        android:text="Filter (coefficient)"
         android:textSize="18sp" />
 
     <Spinner

@@ -135,4 +135,8 @@ public class FileHandler {//path fileName request context
         }
         return value;
     }
+
+    public void saveBufferInFile(){
+
+    }
 }

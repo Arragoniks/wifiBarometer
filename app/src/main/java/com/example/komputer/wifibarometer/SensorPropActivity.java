@@ -27,7 +27,32 @@ public class SensorPropActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String pressure = spinnerPr.getSelectedItem().toString();
-                String interval = spinnerInter.getSelectedItem().toString();
+                String intervalMS = spinnerInter.getSelectedItem().toString();
+                String interval = "";
+                switch(intervalMS){
+                    case "62.5":
+                        interval = "1";
+                        break;
+                    case "125":
+                        interval = "2";
+                        break;
+                    case "250":
+                        interval = "3";
+                        break;
+                    case "500":
+                        interval = "4";
+                        break;
+                    case "1000":
+                        interval = "5";
+                        break;
+                    case "10000":
+                        interval = "6";
+                        break;
+                    case "20000":
+                        interval = "7";
+                        break;
+
+                }
                 String filter = spinnerFilter.getSelectedItem().toString();
                 String request = pressure + "," + interval + "," + filter;
                 Log.e("RequestProperties", request);

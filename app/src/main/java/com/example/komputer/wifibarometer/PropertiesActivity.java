@@ -5,7 +5,10 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Switch;
 
 public class PropertiesActivity extends AppCompatActivity {
 
@@ -17,62 +20,81 @@ public class PropertiesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_properties);
+
+        FileHandler fileHandler = new FileHandler();
+        resetGraph = fileHandler.readProperties("resetGraph", this);
+        buildGraph = fileHandler.readProperties("buildGraph", this);
+        saveBuffer = fileHandler.readProperties("saveBuffer", this);
+
         Button buttonApply = findViewById(R.id.buttonPropApply);
-        Button buttonROK = findViewById(R.id.buttonROK);
-        Button buttonRNO = findViewById(R.id.buttonRNO);
-        Button buttonBOK = findViewById(R.id.buttonBOK);
-        Button buttonBNO = findViewById(R.id.buttonBNO);
-        Button buttonSOK = findViewById(R.id.buttonSOK);
-        Button buttonSNO = findViewById(R.id.buttonSNO);
+
         final Spinner spinnerSamples = findViewById(R.id.spinnerSamples);
         final Spinner spinnerPoints = findViewById(R.id.spinnerPoints);
+        final EditText editText = findViewById(R.id.editSamples);
 
-        buttonROK.setOnClickListener(new View.OnClickListener() {
+        Switch switch1 = findViewById(R.id.switch1);
+        Switch switch2 = findViewById(R.id.switch2);
+        Switch switch3 = findViewById(R.id.switch3);
+
+        if(resetGraph.equals("1")){
+            switch1.setChecked(true);
+        }else{
+            switch1.setChecked(false);
+        }
+        if(buildGraph.equals("1")){
+            switch2.setChecked(true);
+        }else{
+            switch2.setChecked(false);
+        }
+        if(saveBuffer.equals("1")){
+            switch3.setChecked(true);
+        }else{
+            switch3.setChecked(false);
+        }
+
+        switch1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onClick(View view) {
-                resetGraph = "1";
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if(b){
+                    resetGraph = "1";
+                }else{
+                    resetGraph = "0";
+                }
             }
         });
 
-        buttonRNO.setOnClickListener(new View.OnClickListener() {
+        switch2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onClick(View view) {
-                resetGraph = "0";
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if(b){
+                    buildGraph = "1";
+                }else{
+                    buildGraph = "0";
+                }
             }
         });
 
-        buttonBOK.setOnClickListener(new View.OnClickListener() {
+        switch3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onClick(View view) {
-                buildGraph = "1";
-            }
-        });
-
-        buttonBNO.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                buildGraph = "0";
-            }
-        });
-
-        buttonSOK.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                saveBuffer = "1";
-            }
-        });
-
-        buttonSNO.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                saveBuffer = "0";
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if(b){
+                    saveBuffer = "1";
+                }else{
+                    saveBuffer = "0";
+                }
             }
         });
 
         buttonApply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String samples = spinnerSamples.getSelectedItem().toString();
+                String samples;
+                String editsamples = editText.getText().toString();
+                if(!editsamples.equals("")){
+                    samples = editsamples;
+                }else{
+                    samples = spinnerSamples.getSelectedItem().toString();
+                }
                 String points = spinnerPoints.getSelectedItem().toString();
                 FileHandler fileHandler = new FileHandler();
                 fileHandler.editProperties("samples", samples, PropertiesActivity.this);
@@ -85,6 +107,5 @@ public class PropertiesActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
     }
 }
