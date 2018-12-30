@@ -6,8 +6,12 @@
     <string name="samples">Standart samples</string>
     <string name="newSamples">New Samples</string>
     <string name="editText">Type there</string>
-    <string name="ok">OK</string>
+    <string name="ok">Ok</string>
     <string name="measuring">Measuring time</string>
+    <string name="cancel">Cancel</string>
+    <string name="back">Back</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
     <string-array name="samples">
         <item>1000</item>
         <item>500</item>
@@ -29,6 +33,7 @@
     </string-array>
     <string-array name="menuMeasure">
         <item>Measurement</item>
+        <item>Open Saved Graph</item>
         <item>Main</item>
         <item>Save</item>
         <item>Reset</item>
