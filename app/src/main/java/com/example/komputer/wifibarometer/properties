@@ -1,0 +1,21 @@
+url=http://192.168.4.1/
+samples=1000
+pressure=5
+interval=1
+filter=4
+resetGraph=true
+buildGraph=true
+pointsGraph=10000
+saveBuffer=true
+
+
+
+
+
+//add
+TCPRequestTask - connect and receive timeouts, url and port
+File extension
+Change Properties to Settings
+PathSelectDialog - make normal Titles for Path and Open and Save actions, to not show keyboard on launch, add pictures for files and directories
+Settings - add package count
+Fragment Graphing - restrict rotation of the screen, make normal Graph views, make normal resetting of the graph instead of removing all series, refactor code with fileHandler

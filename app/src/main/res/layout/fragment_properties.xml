@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textViewPropertiesMenuTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/properties_menu_title"
+        android:textAlignment="center"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textViewSamplePeriod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sample_period"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+    <Spinner
+        android:id="@+id/spinnerSamplePeriod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/sample_period_array" />
+
+    <TextView
+        android:id="@+id/textViewSamplePeriodCustom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sample_period_custom"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/editTextSamplePeriodCustom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:hint="@string/type_edit_text"/>
+
+    <TextView
+        android:id="@+id/textViewGraph"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/graph"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+    <Switch
+        android:id="@+id/switchResetGraph"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/reset_graph"
+        android:textOff="@string/switch_off"
+        android:textOn="@string/switch_on"/>
+
+    <Switch
+        android:id="@+id/switchBuildGraph"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/build_graph"
+        android:textOff="@string/switch_off"
+        android:textOn="@string/switch_on"/>
+
+    <Switch
+        android:id="@+id/switchSaveBuffer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/save_buffer"
+        android:textOff="@string/switch_off"
+        android:textOn="@string/switch_on"/>
+
+    <TextView
+        android:id="@+id/textViewGraphPoints"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/graph_points"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+    <Spinner
+        android:id="@+id/spinnerGraphPointsCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/pointsGraph" />
+
+    <Button
+        android:id="@+id/buttonPropertiesSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_save" />
+</LinearLayout>

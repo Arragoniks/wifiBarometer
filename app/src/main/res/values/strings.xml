@@ -1,43 +1,40 @@
 <resources>
     <string name="app_name">wifiBarometer</string>
 
-    <string name="start">Start</string>
-    <string name="stop">Stop</string>
-    <string name="samples">Standart samples</string>
-    <string name="newSamples">New Samples</string>
-    <string name="editText">Type there</string>
-    <string name="ok">Ok</string>
-    <string name="measuring">Measuring time</string>
-    <string name="cancel">Cancel</string>
-    <string name="back">Back</string>
-    <string name="yes">Yes</string>
-    <string name="no">No</string>
-    <string-array name="samples">
-        <item>1000</item>
-        <item>500</item>
-        <item>250</item>
+    <!--main xml file-->
+    <string name="main_menu_title">Main Menu</string>
+
+    <!--properties xml file-->
+    <string name="properties_menu_title">Properties</string>
+    <string name="sample_period">Sample Period (ms)</string>
+    <string-array name="sample_period_array">
         <item>100</item>
+        <item>250</item>
+        <item>500</item>
+        <item>1000</item>
     </string-array>
-    <string-array name="graphPoints">
+    <string name="sample_period_custom">Custom sample period (ms)</string>
+    <string name="type_edit_text">Type here</string>
+    <string name="graph">Graph</string>
+    <string name="reset_graph">Reset before graphing</string>
+    <string name="build_graph">Build graph</string>
+    <string name="save_buffer">Save buffer</string>
+    <string name="switch_on">On</string>
+    <string name="switch_off">Off</string>
+    <string name="graph_points">Graph points</string>
+    <string-array name="pointsGraph">
         <item>100</item>
         <item>500</item>
         <item>1000</item>
         <item>5000</item>
         <item>10000</item>
     </string-array>
-    <string-array name="menu">
-        <item>Main</item>
-        <item>Measurement</item>
-        <item>Sensor Properties</item>
-        <item>Properties</item>
-    </string-array>
-    <string-array name="menuMeasure">
-        <item>Measurement</item>
-        <item>Open Saved Graph</item>
-        <item>Main</item>
-        <item>Save</item>
-        <item>Reset</item>
-    </string-array>
+
+    <!--sensor properties xml file-->
+    <string name="sensor_properties_menu_title">Sensor properties</string>
+    <string name="text_pressure">Pressure (accuracy)</string>
+    <string name="text_interval">Interval between samples (ms)</string>
+    <string name="text_filter">Filter (coefficient)</string>
     <string-array name="pressure">
         <item>1</item>
         <item>2</item>
@@ -46,7 +43,7 @@
         <item>5</item>
     </string-array>
     <string-array name="interval">
-        <item>62.5</item>
+        <item>63</item>
         <item>125</item>
         <item>250</item>
         <item>500</item>
@@ -60,4 +57,46 @@
         <item>3</item>
         <item>4</item>
     </string-array>
+
+
+    <!--for all-->
+    <string name="button_save">Save</string>
+    <string name="button_open">Open</string>
+    <!--temporary texts for buttons-->
+    <string name="measurement">Measurement</string>
+    <string name="properties">Properties</string>
+    <string name="sensor_properties">Sensor properties</string>
+
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="samples">Standart samples</string>
+    <string name="newSamples">New Samples</string>
+    <string name="editText">Type there</string>
+    <string name="ok">Ok</string>
+    <string name="measuring">Measuring time</string>
+    <string name="cancel">Cancel</string>
+    <string name="back">Back</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+
+    <!--menu for spinner-->
+    <string-array name="menu_spinner">
+        <item>Main</item>
+        <item>Measurement</item>
+        <item>Sensor Properties</item>
+        <item>Properties</item>
+    </string-array>
+
+
+
+
+    <string-array name="menuMeasure">
+        <item>Measurement</item>
+        <item>Open Saved Graph</item>
+        <item>Main</item>
+        <item>Save</item>
+        <item>Reset</item>
+    </string-array>
+
 </resources>
